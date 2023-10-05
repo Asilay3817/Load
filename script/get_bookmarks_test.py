@@ -11,6 +11,8 @@ from service.transfer import Transfer
 
 def test_load_bookmarks():
     from selenium.webdriver.chrome.options import Options
+
+    # поменять на свой путь (папка с этим проектом, найти в папке файл chromedriver - скопировать его путь и заменить значение в кавычках)
     service = Service(executable_path = '/Users/asilay/Desktop/study/QA/Loader/chromedriver')
     o = Options()
 
