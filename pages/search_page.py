@@ -114,7 +114,7 @@ class SearchPage():
                         self.driver.execute_script("arguments[0].click();", checkbox)  # выбираем чекбокс
                         time.sleep(1)
 
-                        # исключаем ошибку что элемент не временно недоступен после выбора чекбокса
+                        # исключаем ошибку что кнопка "скачать" временно недоступен после выбора чекбокса
                         try:
                             wait = WebDriverWait(self.driver, 30)
                             download_button = wait.until(EC.presence_of_element_located((By.XPATH, "//button[@id='download-object-button']")))
@@ -132,7 +132,9 @@ class SearchPage():
                         latest_file = file_list[0]  # выбираем последний добавленный файл
                         file_name, file_extension = os.path.splitext(latest_file)
                         current_datetime = datetime.datetime.now().strftime("%H.%M.%S")
-                        new_file_name = f'{file_name}.{current_datetime}{file_extension}'  # Замените расширение файла на нужное
+
+                        # создаем новое имя добавляя к нему текущее время скачивания (исключаем замену файлов с одинаковыми именани)
+                        new_file_name = f'{file_name}.{current_datetime}{file_extension}'
                         old = os.path.join(original_file_path, latest_file)
                         new = os.path.join(original_file_path, new_file_name)
                         os.rename(old, new)
