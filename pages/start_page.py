@@ -12,7 +12,7 @@ class StartPage():
           "com%2Fconsole%2Fhome%3FhashArgs%3D%2523%26isauthcode%3Dtrue%26region%3Deu" \
           "-north-1%26state%3DhashArgsFromTB_eu-north-1_4c67827620c13ca7&forceMobileLayout=" \
           "0&forceMobileApp=0&code_challenge=nd7NBn1nwsPoXiHPW2uWNtuqqRacMoF1Yz1NodtfaJM&code_challenge_method=SHA-256"
-    user_name = "elizaveta.shurkova" #указать свой логин
+    user_name = "" #указать свой логин
 
     def __init__(self, driver):
         super().__init__()
