@@ -5,9 +5,9 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class LoginPage():
 
-    account_id = "parity-mrg" #по желанию можно заменить на свой id
-    user_name = "elizaveta.shurkova" #указать свой логин
-    password = "Elizaveta_Shurkova1" #указать свой пароль
+    account_id = "" #по желанию можно заменить на свой id
+    user_name = "" #указать свой логин
+    password = "" #указать свой пароль
 
     def __init__(self, driver):
         super().__init__()
